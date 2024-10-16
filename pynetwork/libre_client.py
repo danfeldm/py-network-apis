@@ -133,3 +133,5 @@ class libre(object):
                 return devices[0]
 
 
+    def rename_device(self,hostname:str,new_name:str):
+        resp = self.make_request(f"/devices/{hostname}/rename/{new_name}",method="PATCH")
