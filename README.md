@@ -27,7 +27,7 @@ Output:
 ```
 --------
 
-To use the FreeIPA client:
+To use the IPA client:
 
 ```python
 from pynetwork.ipa_client import ipa
