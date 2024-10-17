@@ -3,7 +3,7 @@ requires = ["setuptools", "setuptools-scm"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "pynetwork"
+name = "py_network_apis"
 authors = [
     {name = "Daniel Feldman", email = "dfeldman@ringsquared.com"}
 ]
@@ -24,3 +24,6 @@ dependencies = [
     "text-unidecode==1.3",
     "urllib3==2.2.3"
 ]
+
+[project.urls]
+Homepage = "https://github.com/danfeldm/py-network-apis"

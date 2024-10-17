@@ -1,16 +1,21 @@
 
-Python Networking Libraries
+# Python Networking Libraries
 -----------------------
 Python libraries for [Netbox](https://github.com/netbox-community/netbox), [LibreNMS](https://github.com/librenms/librenms), [FreeIPA](https://github.com/freeipa/freeipa), and [SNMP](https://github.com/lextudio/pysnmp)
 FreeIPA client adapted from [nordnet/python-freeipa-json](https://github.com/nordnet/python-freeipa-json)
-    
-Examples
+
+## Install
+--------
+```
+pip install py-network-apis
+```
+## Examples
 --------
 
 To use the LibreNMS client:
 
 ```python
-from pynetwork.libre_client import libre
+from py_network_apis.libre_client import libre
 
 librenms = libre(api_url="http://librenms.org/api/v0",
                  token="04ec2439-cf1b-4d1f-aa60-9b0da99b6eab")
@@ -21,8 +26,8 @@ print(alerts)
 ```
 Output:
 ```python
-[{'hostname': 'localhost', 'id': 99, 'device_id': 1, 'rule_id': 1, 'state': 1, 'alerted': 1, 'open': 1,
- 'note': '', 'timestamp': '2024-01-01 01:01:01', 'info': '', 'severity': 'critical'}]
+[{'hostname': 'localhost', 'id': 99, 'device_id': 1, 'rule_id': 1, 'state': 1, 'alerted': 1,
+ 'open': 1, 'note': '', 'timestamp': '2024-01-01 01:01:01', 'info': '', 'severity': 'critical'}]
 
 ```
 --------
@@ -30,7 +35,7 @@ Output:
 To use the IPA client:
 
 ```python
-from pynetwork.ipa_client import ipa
+from py_network_apis.ipa_client import ipa
 
 free_ipa = ipa("ipaserver.example.net")
 free_ipa.login("ipa_user","ipa_password")
@@ -48,7 +53,7 @@ Output:
 --------
 To use the Netbox Client:
 ```python
-from pynetwork.netbox_client import netbox
+from py_network_apis.netbox_client import netbox
 
 nb = netbox(url="http://netbox.example.com",
 token="516b61e3-1b73-4f29-bdcf-f8f1ebca5371")
@@ -65,7 +70,7 @@ Output:
 
 To use SNMP Client:
 ```python
-from pynetwork.snmp_client import *
+from py_network_apis.snmp_client import *
 
 resp = snmp_get(ip="127.0.0.1",oids=["sysUpTime"],version="v2",community="public",port=161)
 

@@ -1,6 +1,6 @@
 import yaml
 import requests
-from pynetwork.netbox_client import netbox
+from py_network_apis.netbox_client import netbox
 import logging
 
 logging.basicConfig(level=logging.INFO)
