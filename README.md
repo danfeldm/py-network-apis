@@ -1,16 +1,15 @@
 
 # Python Networking Libraries
------------------------
-Python libraries for [Netbox](https://github.com/netbox-community/netbox), [LibreNMS](https://github.com/librenms/librenms), [FreeIPA](https://github.com/freeipa/freeipa), and [SNMP](https://github.com/lextudio/pysnmp)
+
+Python libraries for [Netbox](https://github.com/netbox-community/netbox), [LibreNMS](https://github.com/librenms/librenms), [FreeIPA](https://github.com/freeipa/freeipa), and [SNMP](https://github.com/lextudio/pysnmp)\
 FreeIPA client adapted from [nordnet/python-freeipa-json](https://github.com/nordnet/python-freeipa-json)
 
 ## Install
---------
+
 ```
 pip install py-network-apis
 ```
 ## Examples
---------
 
 To use the LibreNMS client:
 
@@ -30,7 +29,7 @@ Output:
  'open': 1, 'note': '', 'timestamp': '2024-01-01 01:01:01', 'info': '', 'severity': 'critical'}]
 
 ```
---------
+---
 
 To use the IPA client:
 
@@ -50,7 +49,7 @@ Output:
 'dn':'idnsname=hostname,idnsname=example.net.,cn=dns,dc=example,dc=net'}]
 
 ```
---------
+---
 To use the Netbox Client:
 ```python
 from py_network_apis.netbox_client import netbox
@@ -66,7 +65,7 @@ Output:
 ```python
 {'id': 1, 'url': 'https://netbox.example.com/api/dcim/devices/1/', 'display': 'hostname', 'name': 'hostname', 'description': ''}
 ```
---------
+---
 
 To use SNMP Client:
 ```python
