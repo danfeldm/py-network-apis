@@ -63,7 +63,8 @@ print(dict(device))
 ```
 Output:
 ```python
-{'id': 1, 'url': 'https://netbox.example.com/api/dcim/devices/1/', 'display': 'hostname', 'name': 'hostname', 'description': ''}
+{'id': 1, 'url': 'https://netbox.example.com/api/dcim/devices/1/', 'display': 'hostname',
+ 'name': 'hostname', 'description': ''}
 ```
 ---
 
