@@ -106,7 +106,7 @@ class netbox:
             nb_manufacturer= self.get_or_add_manufacturer(manufacturer)
             nb_device_type = self.add_device_type(model,nb_manufacturer.id)
            
-        nb_site = site=self.api.dcim.sites.get(name=name)
+        nb_site = site=self.api.dcim.sites.get(name=site)
         if site is None:
             self.log.warning(f"Site not found")
             return
